@@ -50,6 +50,9 @@ app.post('/send-email', async (req, res) => {
         res.status(500).send('Error sending email: ' + error.message); // send detailed error message to client
     }
 });
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
